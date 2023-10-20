@@ -1,0 +1,12 @@
+def prime_num(a):
+    if a < 2:
+        return False
+    for i in range(2, int(a**0.5) + 1):
+        if a % i == 0:
+            return False
+    return True
+
+def PRIME_FILT(numbers_str):
+    numbers = [int(num) for num in numbers_str.split()]
+    numberss_i = [num for num in numbers if prime_num(num)]
+    return numberss_i
